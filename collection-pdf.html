@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Roboto, sans-serif;
+        }
+
+        /* Styles for the collection till slip */
+        .collection {
+            display: grid;
+            gap: 32px;
+            border: 1px solid black;
+            padding: 16px;
+            margin: 10px;
+        }
+
+
+        .head {
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            color: black;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .grid-section {
+            display: grid;
+            gap: 8px;
+        }
+
+        .item {
+            display: flex;
+        }
+
+        .terms {
+            display: grid;
+            gap: 16px;
+        }
+
+        .signature {
+            display: grid;
+            gap: 75px;
+            width: 25%;
+            margin-top: 53px;
+            margin-bottom: 60px;
+        }
+
+        .label {
+            width: 20%;
+            font-weight: 700;
+            width: 30%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .signature-line {
+            border-top: 1px dotted black;
+            padding-top: 4px;
+        }
+
+        .value {
+            width: 68%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .barcode {
+            display: grid;
+            gap: 16px;
+            text-align: center;
+            margin-bottom: 60px;
+            .barcode-lable{
+                display: flex; 
+                flex-direction: row; 
+                gap: 5px; 
+                align-items: center; 
+                justify-content: center; 
+                font-weight: 600; 
+                font-size: 24px;
+            }
+
+            .barcode-val{
+                font-size: 24px; 
+                font-weight: normal;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body style="font-family: Roboto;">
+    <!-- collection -->
+    <div class="collection" style="page-break-after: always;">
+        <!-- <div class="head">
+            <img style="width: 33%;" src="./Screenshot 2024-05-17 121508.png" alt="">
+        </div> -->
+        <div class="title">
+            <span>Customer Repair Item Collection Slip (Store Copy Only)</span>
+        </div>
+        <div class="grid-section">
+            <div class="item">
+                <span class="label">Date:</span>
+                <span class="value">{{created_at}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Repair Ref #:</span>
+                <span class="value">{{cid}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store:</span>
+                <span class="value">{{store_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store #:</span>
+                <span class="value">{{store_id}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product name:</span>
+                <span class="value">{{barcode}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product #:</span>
+                <span class="value">{{article_description}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Serial #:</span>
+                <span class="value">{{article_serial_number}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Accessories:</span>
+                <span class="value">{{accessories}}</span>
+            </div>
+        </div>
+        <div class="terms" style="text-align: center;">
+            {{ticketbarcode}}
+        </div>
+        <div class="signature">
+            <span class="signature-line">Customer Name</span>
+            <span class="signature-line">Customer Signature</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

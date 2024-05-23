@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Roboto, sans-serif;
+        }
+
+        /* Styles for the Repair Ticket till slip */
+        .tc {
+            display: grid;
+            gap: 32px;
+            border: 1px solid black;
+            padding: 16px;
+            margin: 10px;
+        }
+
+
+        .head {
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            color: black; 
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .grid-section {
+            display: grid;
+            gap: 8px;
+        }
+
+        .item {
+            display: flex;
+        }
+
+        .terms {
+            display: grid;
+            gap: 16px;
+        }
+
+        .signature {
+            display: grid;
+            gap: 75px;
+            width: 25%;
+            margin-top: 53px;
+            margin-bottom: 60px;
+        }
+
+        .label {
+            width: 20%; 
+            font-weight: 700;
+            width: 30%; 
+            display: flex; 
+            flex-wrap: wrap;
+        }
+
+        .signature-line {
+            border-top: 1px dotted black;
+            padding-top: 4px;
+        }
+
+        .value{
+            width: 68%; 
+            display: flex; 
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body style="font-family: Roboto;">
+    <!-- T&C -->
+    <div class="tc"
+        style="page-break-after: always;">
+        <div class="head">
+            <span>Repair Ticket (Store Copy)</span>
+        </div>
+        <div class="title">
+            <span>Repair Ticket</span>
+        </div>
+        <div class="grid-section">
+            <div class="item">
+                <span class="label">Date:</span>
+                <span class="value">{{created_at}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Repair Ref #:</span>
+                <span class="value">{{cid}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Customer:</span>
+                <span class="value">{{customer_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store:</span>
+                <span class="value">{{store_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store #:</span>
+                <span class="value">{{store_id}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Barcode:</span>
+                <span class="value">{{barcode}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Description:</span>
+                <span class="value">{{article_description}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Serial #:</span>
+                <span class="value">{{article_serial_number}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Accessories:</span>
+                <span class="value">{{accessories}}</span>
+            </div>
+        </div>
+        <div class="terms">
+            <span class="title">Repair job for customer (Terms & Conditions)</span>
+            <span>This confirms the acknowledgement of the Repairs Terms &amp; Conditions as provided to the customer
+                when logging the repair request for the product noted.
+                For the details, please go to ....</span>
+        </div>
+        <div class="signature">
+            <span class="signature-line">Customer Name</span>
+            <span class="signature-line">Customer Signature</span>
+        </div>
+    </div>
+    <div class="tc"
+        style="page-break-after: always;">
+        <div class="head">
+            <!-- <span>(Customer Copy)</span> -->
+            <img style="width: 33%;" src="./Screenshot 2024-05-17 121508.png" alt="">
+        </div>
+        <div class="title">
+            <span>Repair Ticket</span>
+        </div>
+        <div class="grid-section">
+            <div class="item">
+                <span class="label">Date:</span>
+                <span class="value">{{created_at}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Repair Ref #:</span>
+                <span class="value">{{cid}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Customer:</span>
+                <span class="value">{{customer_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store:</span>
+                <span class="value">{{store_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store #:</span>
+                <span class="value">{{store_id}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Barcode:</span>
+                <span class="value">{{barcode}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Description:</span>
+                <span class="value">{{article_description}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Serial #:</span>
+                <span class="value">{{article_serial_number}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Accessories:</span>
+                <span class="value">{{accessories}}</span>
+            </div>
+        </div>
+        <div class="terms" style="margin-bottom: 60px;">
+            <span style="font-weight: 700;">Dear Customer</span>
+            <ul>
+                <li>Please retain this document as acknowledgment that Builders has taken receipt of the above item.
+                </li>
+                <li>Should you wish to query the status of the item handed in, please quote the above number.</li>
+                <li>Your signature below acknowledges the items handed in and not collected within 3 months after being
+                    assessed will be sold to defray expenses and the Company will not be liable for any subsequent
+                    claims.</li>
+                <li>You will be liable for the quotation cost levied by the supplier (if any), in the event of a repair
+                    cost being rejected. Builders may, from time to time, utilise 3rd. Party service providers to attend
+                    to the repair of the above item.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Dispatch -->
+    <div class="tc"
+        style="page-break-after: always;">
+        <div class="head">
+            <!-- <span>Store Copy</span> -->
+            <img style="width: 33%;" src="./Screenshot 2024-05-17 121508.png" alt="">
+        </div>
+        <div class="title">
+            <span>Customer Repair Item Dispatch Slip</span>
+        </div>
+        <div class="grid-section">
+            <div class="item">
+                <span class="label">Date:</span>
+                <span class="value">{{created_at}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Repair Ref #:</span>
+                <span class="value">{{cid}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Customer:</span>
+                <span class="value">{{customer_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store:</span>
+                <span class="value">{{store_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store #:</span>
+                <span class="value">{{store_id}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Barcode:</span>
+                <span class="value">{{barcode}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Description:</span>
+                <span class="value">{{article_description}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Serial #:</span>
+                <span class="value">{{article_serial_number}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Accessories:</span>
+                <span class="value">{{accessories}}</span>
+            </div>
+        </div>
+        <div class="terms" style="text-align: center;">
+            {{ticketbarcode}}
+        </div>
+        <div class="signature">
+            <span class="signature-line">Vendor/Courier name</span>
+            <span class="signature-line">Vendor/Courier Signature</span>
+        </div>
+    </div>
+    <div class="tc"
+        style="page-break-after: always;">
+        <div class="head">
+            <!-- <span>Vendor Copy</span> -->
+            <img style="width: 33%;" src="./Screenshot 2024-05-17 121508.png" alt="">
+        </div>
+        <div class="title">
+            <span>Customer Repair Item Dispatch Slip</span>
+        </div>
+        <div class="grid-section">
+            <div class="item">
+                <span class="label">Date:</span>
+                <span class="value">{{created_at}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Repair Ref #:</span>
+                <span class="value">{{cid}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Customer:</span>
+                <span class="value">{{customer_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store:</span>
+                <span class="value">{{store_name}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Store #:</span>
+                <span class="value">{{store_id}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Repair Agent</span>
+                <span class="value">{{repair_agent}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Barcode:</span>
+                <span class="value">{{barcode}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Description:</span>
+                <span class="value">{{article_description}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Serial #:</span>
+                <span class="value">{{article_serial_number}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Accessories:</span>
+                <span class="value">{{accessories}}</span>
+            </div>
+        </div>
+        <div class="terms" style="text-align: center;">
+            {{ticketbarcode}}
+        </div>
+    </div>
+</body>
+</html>
