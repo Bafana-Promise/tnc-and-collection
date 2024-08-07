@@ -79,6 +79,12 @@
             display: flex;
             flex-wrap: wrap;
         }
+
+        .row{
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+        }
     </style>
 </head>
 
@@ -93,7 +99,7 @@
         </div>
         <div class="grid-section">
             <div class="item">
-                <span class="label">Date:</span>
+                <span class="label">Date booked in:</span>
                 <span class="value">{{created_at}}</span>
             </div>
             <div class="item">
@@ -105,12 +111,12 @@
                 <span class="value">{{customer_name}}</span>
             </div>
             <div class="item">
-                <span class="label">Store:</span>
-                <span class="value">{{store_name}}</span>
+                <span class="label">Customer BP::</span>
+                <span class="value">{{store_bp}}</span>
             </div>
             <div class="item">
-                <span class="label">Store #:</span>
-                <span class="value">{{store_id}}</span>
+                <span class="label">Store:</span>
+                <span class="value">{{store_name}}</span>
             </div>
             <div class="item">
                 <span class="label">Product Barcode:</span>
@@ -171,12 +177,12 @@
                 <span class="value">{{customer_name}}</span>
             </div>
             <div class="item">
-                <span class="label">Store:</span>
-                <span class="value">{{store_name}}</span>
+                <span class="label">Customer BP:</span>
+                <span class="value">{{customer_bp}}</span>
             </div>
             <div class="item">
-                <span class="label">Store #:</span>
-                <span class="value">{{store_id}}</span>
+                <span class="label">Store:</span>
+                <span class="value">{{store_name}}</span>
             </div>
             <div class="item">
                 <span class="label">Product Barcode:</span>
@@ -201,24 +207,33 @@
         </div>
         <div class="terms" style="margin-bottom: 60px;">
             <span style="font-weight: 700;">Dear Customer</span>
+            <p>By signing these terms and conditions, you as the customer has read and understood the terms and conditions and had the opportunity to clarify any
+                uncertainties.</p>
             <ul>
-                <li>Please retain this document as acknowledgment that Builders has taken receipt of the above Product.
-                    For
-                    full terms and conditions, please go to …(tbc)LINK
+                <li>Please retain this document as acknowledgment that Makro has taken receipt of the above Product.</li>
+                <li>Should you wish to query the status of the product handed in, please quote the above repair reference number.</li>
+                <li>Products deemed to be defective due to no fault from the customer will either be repaired, replaced, or refunded, depending on the manufacturer
+                    warranty terms and conditions.</li>
+                <li>Products under manufacturer’s warranty will be assessed by manufacturer/repair agent and dealt with in terms of such warranty conditions.</li>
+                <li>The manufacturer’s warranty will only cover the defects in the process of manufacturing the products, subject to the relevant manufacturer&#39;s
+                    warranty.
                 </li>
-                <li>Should you wish to query the status of the product handed in, please quote the above number.</li>
-                <li>By signing the acknowledgement of the Faulty product receipt, you acknowledge that products handed
-                    in
-                    and not collected within 3 months after being assessed will be sold to defray expenses and Builders
-                    will
-                    not be liable for any subsequent claims.</li>
-                <li>You will be liable for the quotation cost levied by the supplier (if any), in the event of a repair
-                    cost being
-                    rejected.</li>
-                <li>Builders may, from time to time, utilise 3 rd. Party service providers to attend to the assessment /
-                    repair of
-                    the above product.</li>
+                <li>If repairs are not covered by the manufacturer warranty, which include but not limited to physical damage, no fault found and infestation a charge
+                    will be levied.</li>
+                <li>If a quotation is provided and not responded to and accepted within 14 – 21 days, the supplier handling and courier fees will be charged to the
+                    customer. All items quoted/rejected and not settled within 30 days from notification, the unrepaired item will be sold by the supplier to defray
+                    expenses.</li>
+                <li>Products handed in and not collected within 3 months from notification by us will be sold to defray expenses and you indemnify us against any
+                    claims in this regard.</li>
+                <li>Credits/Refunds should be collected within 3 months and will expire after 6 months of notification.</li>
+                <li>Makro may, from time to time, utilise 3rd. Party service providers to attend to the assessment / repair of the above product.</li>
                 <li>You consent to the processing of your personal information in terms of POPIA.</li>
+            </ul>
+            <ul style="margin-top: 40px;">
+                <div class="item row" style="margin-top: 50px;">
+                    <li><div class="signature-line" style="width: 284px;">Customer Name</div></li>
+                    <div class="signature-line" style="width: 284px;">Customer Signature</div>
+                </div>
             </ul>
         </div>
     </div>
@@ -241,16 +256,16 @@
                 <span class="value">{{cid}}</span>
             </div>
             <div class="item">
-                <span class="label">Customer:</span>
-                <span class="value">{{customer_name}}</span>
-            </div>
-            <div class="item">
                 <span class="label">Store:</span>
                 <span class="value">{{store_name}}</span>
             </div>
             <div class="item">
                 <span class="label">Store #:</span>
                 <span class="value">{{store_id}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Repair Agent:</span>
+                <span class="value">{{repair_agent}}</span>
             </div>
             <div class="item">
                 <span class="label">Product Barcode:</span>
@@ -299,10 +314,6 @@
                 <span class="value">{{cid}}</span>
             </div>
             <div class="item">
-                <span class="label">Customer:</span>
-                <span class="value">{{customer_name}}</span>
-            </div>
-            <div class="item">
                 <span class="label">Store:</span>
                 <span class="value">{{store_name}}</span>
             </div>
@@ -315,12 +326,12 @@
                 <span class="value">{{repair_agent}}</span>
             </div>
             <div class="item">
-                <span class="label">Product Barcode:</span>
-                <span class="value">{{barcode}}</span>
-            </div>
-            <div class="item">
                 <span class="label">Product Description:</span>
                 <span class="value">{{article_description}}</span>
+            </div>
+            <div class="item">
+                <span class="label">Product Barcode:</span>
+                <span class="value">{{barcode}}</span>
             </div>
             <div class="item">
                 <span class="label">Serial #:</span>
@@ -358,10 +369,6 @@
                 <span class="value">{{cid}}</span>
             </div>
             <div class="item">
-                <span class="label">Customer:</span>
-                <span class="value">{{customer_name}}</span>
-            </div>
-            <div class="item">
                 <span class="label">Store:</span>
                 <span class="value">{{store_name}}</span>
             </div>
@@ -370,12 +377,12 @@
                 <span class="value">{{store_id}}</span>
             </div>
             <div class="item">
-                <span class="label">Product Barcode:</span>
-                <span class="value">{{barcode}}</span>
+                <span class="label">Product Name:</span>
+                <span class="value">{{product_name}}</span>
             </div>
             <div class="item">
-                <span class="label">Product Description:</span>
-                <span class="value">{{article_description}}</span>
+                <span class="label">Product #:</span>
+                <span class="value">{{barcode}}</span>
             </div>
             <div class="item">
                 <span class="label">Serial #:</span>
